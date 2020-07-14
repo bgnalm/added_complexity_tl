@@ -95,17 +95,17 @@ print(e-s)
 # img.show()
 
 for i in range(3000):
-    img, text = generate_simple_captcha(200, 100, 4, possible_fonts=possible_font)
-    img.save(f'./images/simple/train/{text}.png')
+    img, text = generate_simple_captcha(100, 100, 2, possible_fonts=possible_font)
+    img.save(f'./images/simple/train/{text}.{i}.png')
 
 for i in range(1000):
-    img, text = generate_simple_captcha(200, 100, 4, possible_fonts=possible_font)
-    img.save(f'./images/simple/test/{text}.png')
+    img, text = generate_simple_captcha(100, 100, 2, possible_fonts=possible_font)
+    img.save(f'./images/simple/test/{text}.{i}.png')
 
 for i in range(100):
-    img, text = generate_complex_captcha(200, 100, 4, possible_fonts=possible_font)
-    img.save(f'./images/complex/train/{text}.png')
+    img, text = generate_complex_captcha(100, 100, 2, possible_fonts=possible_font)
+    img.save(f'./images/complex/train/{text}.{i}.png')
 
 for i in range(1000):
-    img, text = generate_complex_captcha(200, 100, 4, possible_fonts=possible_font)
-    img.save(f'./images/complex/test/{text}.png')
+    img, text = generate_complex_captcha(100, 100, 2, possible_fonts=possible_font)
+    img.save(f'./images/complex/test/{text}.{i}.png')
